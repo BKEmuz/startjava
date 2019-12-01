@@ -6,33 +6,28 @@ public class ConditionalStatement {
             System.out.println("Your are older than 20");
         }
 
-        boolean isSexMale = true;
-        if (isSexMale == true) {
+        boolean isMale = true;
+        if (isMale) {
             System.out.println("Your are a man");
         }
 
-        boolean isSexNotMale = true;
-        if (isSexNotMale == true) {
-            System.out.println("Your are not a man");
+        if (!isMale) {
+            System.out.println("Your are a not man");
         }
 
         double height = 1.82;
         if (height < 1.80) {
             System.out.println("Your are lower 1.80");
-        } 
-        else {
+        } else {
             System.out.println("First part of home work is done");
         }
 
         char firstNameLetter = 'K';
         if (firstNameLetter == 'M') {
             System.out.println("Your name begins with M");
-
         } else if (firstNameLetter == 'I') {
             System.out.println("Your name begins with I");
-        }
-        
-        else {
+        } else {
             System.out.println("The end of homework");
         }
     }
