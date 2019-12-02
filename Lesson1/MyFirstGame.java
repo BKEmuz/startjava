@@ -7,14 +7,16 @@ public class MyFirstGame {
         System.out.println("Загадайте число от 0 до 100");
         while (true) {
             int playerNumber = scanPlayerNumber.nextInt();
-            if (playerNumber == compNumber) {
-                System.out.println("Вы угадали!");
-                break;
-            } else if (playerNumber > compNumber)  {
+            if (playerNumber > compNumber)  {
                 System.out.println("Введенное вами число больше того, что загадал компьютер");
-            } else if (playerNumber < compNumber)  {
+            }
+
+            if (playerNumber < compNumber)  {
                 System.out.println("Введенное вами число меньше того, что загадал компьютер");
+            } else {
+                break;
             }
         }
+        System.out.println("Вы угадали!");
     }
 }
