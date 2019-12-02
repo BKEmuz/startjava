@@ -7,27 +7,26 @@ public class Calculator {
         int numberA = scanNumbers.nextInt();
         System.out.println("Введите любое целое число b");
         int numberB = scanNumbers.nextInt();
+        scanNumbers.nextLine();
         System.out.println("Введите одно из действий +, -, *, /, ^, %");
-        Scanner scanString = new Scanner(System.in); //Если не использовать новый Scanner объект строка 13 считывается пустой.
-        String mathSymbol = scanString.nextLine(); // По каким то причинам считывает пустую строку, не предлагает ввести число с консоли
-        char mathSymbolChar = mathSymbol.charAt(0);
+        String mathSymbol = scanNumbers.nextLine(); 
+        char operator = mathSymbol.charAt(0);
 
-        if (mathSymbolChar == '+') {
+        if (operator == '+') {
             System.out.println("Сумма числа a и числа b = " + (numberA + numberB));
-        } else if (mathSymbolChar == '-') {
+        } else if (operator == '-') {
             System.out.println("Разница числа a и числа b = " + (numberA - numberB));
-        } else if (mathSymbolChar == '/') {
+        } else if (operator == '/') {
             System.out.println("Частное числа a и числа b = " + (numberA / numberB));
-        } else if (mathSymbolChar == '*') {
+        } else if (operator == '*') {
             System.out.println("Произведение числа a и числа b = " + (numberA * numberB));
-        } else if (mathSymbolChar == '^') {
+        } else if (operator == '^') {
             int result = 1;
-            int i;
-            for (i = 1; i <= numberB; i++ ) {
-                result = result * numberA;
+            for (int i = 1; i <= numberB; i++ ) {
+                result *= numberA;
             }
             System.out.println("Число а в степени b = " + result);
-        } else if (mathSymbolChar == '%') {
+        } else if (operator == '%') {
             System.out.println("Остаток от деления числа a на число b = " + (numberA % numberB));
         } else {
             System.out.println("Неверный оператор");
