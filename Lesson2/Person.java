@@ -5,7 +5,7 @@ public class Person {
 	double weight = 87.5;
 	int age = 30;
 
-	void move {
+	void move() {
 		System.out.println(+ name " прошел 15 метров");
 	}
 
@@ -13,7 +13,7 @@ public class Person {
 		return true;
 	}
 
-	void running() {
+	void run() {
 		System.out.println(+ name " бежит 100 метров");
 	}
 
@@ -21,7 +21,7 @@ public class Person {
 		System.out.println(+ name " говорит");
 	}
 
-	String useLearningSkill() {
+	String useLearnSkill() {
 		System.out.println(+ name " учит Java");
 		return "Учу Java";
 	}
