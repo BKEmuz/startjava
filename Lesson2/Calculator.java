@@ -1,13 +1,10 @@
 public class Calculator {
-    public int numberA;
-    public int numberB;
-    public char operator;
-    public boolean isContinue;
-    public String answer;
+    int numberA;
+    int numberB;
+    char operator;
 
-    public int useCalculate(int numberA, int numberB, char operator) {
+    public int Calculate() {
         int result = 1;
-
         switch (operator) {
             case '+':
                 result = numberA + numberB;
@@ -34,21 +31,6 @@ public class Calculator {
                 break;
         }
         return result;
-    }
-
-    public void Continue() {
-        switch (answer) {
-            case "Да":
-                isContinue = true;
-                break;
-            case "Нет":
-                isContinue = false;
-                break;
-            default:
-                System.out.println("Хотите продолжить? [да/нет]:");
-                isContinue = true;
-                break;
-        }
     }
 }
 
