@@ -4,42 +4,48 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         Scanner scan = new Scanner(System.in);
-        boolean isContinue = false;
+        String answer;
 
         do {
             System.out.println("Введите первое число:");
-            calc.numberA = scan.nextInt();
+            int numberA = scan.nextInt();
+            calc.setNnumberA(numberA);
             scan.nextLine();
 
             System.out.println("Введите знак математической операции:");
             String sign = scan.nextLine();
-            calc.operator = sign.charAt(0);
+            char operator = sign.charAt(0);
+            calc.setOperator(operator);
 
             System.out.println("Введите второе число:");
-            calc.numberB = scan.nextInt();
+            int numberB = scan.nextInt();
+            calc.setNnumberB(numberB);
             scan.nextLine();
 
-            System.out.println("Результат вычисления " + calc.Calculate());
+            System.out.println("Результат вычисления " + calc.calculate());
 
-            boolean exit = false;
                do {
                    System.out.println("Хотите продолжить? [Да/Нет]: ");
-                   String answer = scan.nextLine();
+                   answer = scan.nextLine();
                    switch (answer) {
                        case "Да":
-                           isContinue = true;
-                           exit = true;
+                           answer = "Да";
                            break;
                        case "Нет":
-                           isContinue = false;
-                           exit = true;
+                           answer = "Нет";
                            break;
                    }
 
-                   if (exit) {
+                   if (answer.equals("Да") | answer.equals("Нет")) {
                        break;
                    }
+
                } while (true);
-        } while (isContinue);
+
+            if (answer.equals("Нет")) {
+                break;
+            }
+
+        } while (true);
     }
 }

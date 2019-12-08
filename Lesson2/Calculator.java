@@ -1,9 +1,21 @@
 public class Calculator {
-    int numberA;
-    int numberB;
-    char operator;
+    private int numberA;
+    private int numberB;
+    private char operator;
 
-    public int Calculate() {
+    void setNnumberA(int numberA) {
+        this.numberA = numberA;
+    }
+
+    void setNnumberB(int numberB) {
+        this.numberB = numberB;
+    }
+
+    void setOperator(char operator) {
+        this.operator = operator;
+    }
+
+    public int calculate() {
         int result = 1;
         switch (operator) {
             case '+':
