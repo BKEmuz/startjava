@@ -1,6 +1,6 @@
 public class JaegerTest {
     public static void main(String[] args) {
-        Jaeger jaeger1 = new Jaeger ("Striker Eureka", "Mark-5","Australia",76.2f, 1.850f, 10, 10, 9,"Assault Mount 3.25 Sting-Blades","XIG Supercell Chamber");
+        Jaeger jaeger1 = new Jaeger ("Striker Eureka", "Mark-5", "Australia", 76.2f, 1.850f, 10, 10, 9, "Assault Mount 3.25 Sting-Blades", "XIG Supercell Chamber");
         System.out.println("Имя робота 1 " + jaeger1.getModelName());
         System.out.println("Имя робота 1 " + jaeger1.getModelName());
         System.out.println(jaeger1.getModelName() + " имеет уровень брони " + jaeger1.getArmor());
@@ -16,8 +16,8 @@ public class JaegerTest {
         jaeger1.moveForward();
         jaeger1.jump();
         jaeger1.powerOff();
-        
-        Jaeger jaeger2 = new Jaeger ("Coyote Tango","Mark-1", "Japan", 85.34f,2.312f, 5, 7, 4, "Ballistic mortar cannons V-PI EnergyCaster", "Iso-thor reaction chamber");
+
+        Jaeger jaeger2 = new Jaeger ("Coyote Tango", "Mark-1", "Japan", 85.34f, 2.312f, 5, 7, 4, "Ballistic mortar cannons V-PI EnergyCaster", "Iso-thor reaction chamber");
         System.out.println("Имя робота 2 " + jaeger2.getModelName());
         System.out.println(jaeger2.getModelName() + " имеет уровень брони " + jaeger2.getArmor());
         System.out.println("Энергетическое ядро " + jaeger2.getModelName() + " " + jaeger2.getEnergyCore());
