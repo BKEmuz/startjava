@@ -1,8 +1,8 @@
 public class Player {
-    String name;
-    int number = (int) (Math.random() * 10);
+    private String name;
+    private int number;
 
-    public Player (String name) {
+    public Player(String name) {
         this.name = name;
     }
 
@@ -12,5 +12,9 @@ public class Player {
 
     int getNumber() {
         return number;
+    }
+
+    void SetNumber(int number) {
+        this.number = number;
     }
 }
