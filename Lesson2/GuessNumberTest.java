@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GuessNumberTest {
+public class GuessNumberTest { 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Игрок 1 введите ваше имя");

@@ -1,4 +1,4 @@
-public class GuessNumber {
+public class GuessNumber { 
     private String p1Name;
     private int p1Number;
     private String p2Name;
