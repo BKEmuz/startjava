@@ -12,7 +12,6 @@ public class GuessNumberTest {
         String answer;
 
         do {
-
             GuessNumber game = new GuessNumber(p1, p2);
             game.start();
 
