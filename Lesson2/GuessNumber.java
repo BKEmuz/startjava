@@ -1,22 +1,27 @@
-public class GuessNumber { 
+import java.util.Scanner;
+
+public class GuessNumber {
     private String p1Name;
     private int p1Number;
     private String p2Name;
     private int p2Number;
 
-    public GuessNumber (String p1Name, int p1Number, String p2Name, int p2Number) {
-        this.p1Name = p1Name;
-        this.p1Number = p1Number;
-        this.p2Name = p2Name;
-        this.p1Number = p2Number;
+    public GuessNumber (Player p1, Player p2) {
+        this.p1Name = p1.getName();
+        this.p2Name = p2.getName();
     }
 
     public void start() {
         boolean p1isright = false;
         boolean p2isright = false;
-        int compNumber = (int) (Math.random() * 10);
+        int compNumber = (int) (Math.random() * 100);
 
         while (true) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println(p1Name + " введите ваше число");
+            int p1Number = scan.nextInt();
+            System.out.println(p2Name + " введите ваше число");
+            int p2Number = scan.nextInt();
             System.out.println("Число которое загадал компьютер " + compNumber);
             System.out.println("Игрок " + p1Name + " думает, что это " + p1Number);
             System.out.println("Игрок " + p2Name + " думает, что это " + p2Number);
