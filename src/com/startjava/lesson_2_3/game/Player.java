@@ -5,7 +5,7 @@ public class Player {
     private int number;
 
 
-     String getName() {
+    String getName() {
         return name;
     }
 
@@ -16,6 +16,7 @@ public class Player {
     void setNumber(int number) {
         this.number = number;
     }
+
     void setName(String name) {
         this.name = name;
     }
